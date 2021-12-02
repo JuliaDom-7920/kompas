@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Animation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+    <link href="css.css" rel="stylesheet">
+</head>
+<body>
+    <div class="menu-panel">
+        <svg id="LL" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="350" height="100%">
+            <rect x="0" y="100%" width="10" height="100%"> 
+                <animate attributeName="y" begin="LL.mouseover + 0.5s" from="100%" to="0" dur="0.4s" fill="freeze" restart="whenNotActive" id="line-up"/> 
+                <animate attributeName="y" begin="LL.mouseleave" from="0" to="100%" dur="0.4s" fill="freeze"/>  
+            </rect>
+        </svg>
+        <p id="prompt">Explore</p>
+        <nav id="top-level">
+            <ul>
+                <li><a id="section1" href="#">Consultancy</a></li>
+                <li><a id="section2" href="#">Development</a></li>
+                <li><a id="section3" href="#">UI / UX</a></li>
+            </ul>
+        </nav>
+    </div>
+    <header>
+        <nav id="mobile-navigation">
+            <div id="toggle-menu">            
+                <svg id="btn-menu" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="21">
+                    <g id="btn-open" style="opacity:1">
+                        <rect x="0" y="0" width="3" height="3"></rect>
+                        <rect x="9" y="0" width="3" height="3"></rect>
+                        <rect x="18" y="0" width="3" height="3"></rect>
+                        <rect x="0" y="9" width="3" height="3"></rect>
+                        <rect x="9" y="9" width="3" height="3"></rect>
+                        <rect x="18" y="9" width="3" height="3"></rect>
+                        <rect x="0" y="18" width="3" height="3"></rect>
+                        <rect x="9" y="18" width="3" height="3"></rect>
+                        <rect x="18" y="18" width="3" height="3"></rect>
+                    </g>
+                    <g id="btn-close" style="opacity:0">
+                        <rect x="0" y="0" width="3" height="3">
+                            <animate
+                                attributeName="width"
+                                to="26"
+                                dur="0.25s"
+                                begin="btn-menu.click + 0s"
+                                fill="freeze"/>
+                            <animate
+                                attributeName="height"
+                                to="2"
+                                dur="0.25s"
+                                begin="btn-menu.click + 0s"
+                                fill="freeze"/>
+                            <animateTransform 
+                                attributeName="transform"
+                                attributeType="XML"
+                                type="translate"
+                                by="2 0.5"
+                                dur="0.25s"
+                                begin="btn-menu.click + 0s"
+                                fill="freeze"/>
+                            <animateTransform
+                                attributeName="transform"
+                                attributeType="XML"
+                                type="rotate"
+                                by="45"
+                                dur="0.25s"
+                                begin="btn-menu.click + 0s"
+                                fill="freeze"/>
+                        </rect>
+                        <rect x="0" y="18" width="3" height="3">
+                            <animate
+                                attributeName="width"
+                                to="26"
+                                dur="0.25s"
+                                begin="btn-menu.click + 0s"
+                                fill="freeze"/>
+                            <animate
+                                attributeName="height"
+                                to="2"
+                                dur="0.25s"
+                                begin="btn-menu.click + 0s"
+                                fill="freeze"/>
+                            <animateTransform 
+                                attributeName="transform"
+                                attributeType="XML"
+                                type="translate"
+                                by="-12.5 6.5"
+                                dur="0.25s"
+                                begin="btn-menu.click + 0s"
+                                fill="freeze"/>
+                            <animateTransform
+                                attributeName="transform"
+                                attributeType="XML"
+                                type="rotate"
+                                by="-45"
+                                dur="0.25s"
+                                begin="btn-menu.click + 0s"
+                                fill="freeze"/>
+                        </rect>
+                    </g>
+                    <g id="btn-close-reverse" style="opacity:0">
+                        <rect x="0" y="0" width="3" height="3">
+                            <animate
+                                attributeName="width"
+                                from="26"
+                                to="3"
+                                dur="0.25s"
+                                begin="btn-menu.click + 0s"
+                                fill="freeze"/>
+                            <animate
+                                attributeName="height"
+                                from="2"
+                                to="3"
+                                dur="0.25s"
+                                begin="btn-menu.click + 0s"
+                                fill="freeze"/>
+                            <animateTransform 
+                                attributeName="transform"
+                                attributeType="XML"
+                                type="translate"
+                                from="2 0.5"
+                                to="0 0"
+                                dur="0.25s"
+                                begin="btn-menu.click + 0s"
+                                additive="sum"
+                                fill="freeze"/>
+                            <animateTransform
+                                attributeName="transform"
+                                attributeType="XML"
+                                type="rotate"
+                                from="45"
+                                to="0"
+                                dur="0.25s"
+                                begin="btn-menu.click + 0s"
+                                additive="sum"
+                                fill="freeze"/>
+                        </rect>
+                        <rect x="0" y="18" width="3" height="3">
+                            <animate
+                                attributeName="width"
+                                from="26"
+                                to="3"
+                                dur="0.25s"
+                                begin="btn-menu.click + 0s"
+                                fill="freeze"/>
+                            <animate
+                                attributeName="height"
+                                from="2"
+                                to="3"
+                                dur="0.25s"
+                                begin="btn-menu.click + 0s"
+                                fill="freeze"/>
+                            <animateTransform 
+                                attributeName="transform"
+                                attributeType="XML"
+                                type="translate"
+                                from="-12.5 6.5"
+                                to="0 0"
+                                dur="0.25s"
+                                begin="btn-menu.click + 0s"
+                                additive="sum"
+                                fill="freeze"/>
+                            <animateTransform
+                                attributeName="transform"
+                                attributeType="XML"
+                                type="rotate"
+                                from="-45"
+                                to="0"
+                                dur="0.25s"
+                                begin="btn-menu.click + 0s"
+                                additive="sum"
+                                fill="freeze"/>
+                        </rect>
+                    </g>
+                </svg>
+            </div>
+            <div id="menu-slide-out">        
+                    <div id="nav-content">
+                        <div id="contact-information">
+                            <div>
+                                <p>15-17 Middle Street<br>
+                                Brighton<br>
+                                BN1 1AL<br>
+                                <strong>United Kingdom</strong></p>
+                            </div>
+                            <div>
+                                <p>Voigtstraße<br>
+                                Leipzig<br>
+                                04179<br>
+                                <strong>Germany</strong></p>
+                            </div>
+                            <div>
+                                <p>
+                                    <a href="https://www.instagram.com/cultdigital/" target="_blank">instagram.com/cultdigital</a><br>
+                                    <a href="https://dribbble.com/cultdigital" target="_blank">dribbble.com/cultdigital</a><br>
+                                    <a href="https://twitter.com/cultdigitaluk" target="_blank">twitter.com/cultdigitaluk</a><br>
+                                    <a href="https://www.facebook.com/cultdigitaluk/" target="_blank">facebook.com/cultdigitaluk</a>
+                                </p>
+                            </div>
+                            <div>
+                                <p>
+                                    <a href="mailto:contact@chriscarruthers.co.uk">contact@chriscarruthers.co.uk</a><br>
+                                    <a href="mailto:studio@cult-digital.com">studio@cult-digital.com</a><br><br>
+                                    Skype: white.label.development
+                                </p>
+                            </div>
+                        </div>
+                        <div id="testimonials" class="cycle-slideshow" data-cycle-speed="1200" data-cycle-timeout="8000" data-cycle-slides="> div" data-cycle-pager="#testimonials-pager" data-cycle-log="false" data-cycle-pause-on-hover="true">
+                            
+                        <div class="cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 99; visibility: visible; opacity: 1; display: block;"><p>"Chris developed our concept into an attractive working web site. He worked with us through every step of the design and development process and the finished site fully meets our expectations. Thanks Chris for a job well done!"<br><br><strong>T. Lancaster, Agua Atlantic</strong></p></div></div>
+                    </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main-object">
+        <svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 550 550" style="enable-background:new 0 0 550 550;" xml:space="preserve">
+            <style type="text/css">
+                .st0{fill:#fbfbfbe3;}
+                .st1{fill:#010101;}
+            </style>
+            <g>
+                <path id="White" class="st0" d="M228.2,493.6c-3.6,3.2-7.5,0.5-10.8,0c-25.5-4.2-50.1-11.3-73-23.6c-18-9.6-34.6-21.3-49.8-35
+                    c-23.3-21-41.3-45.8-55.2-73.7c-9.8-19.5-17-40-20.8-61.4c-2-11.3-3.2-22.9-3.5-34.5c-0.6-20.7,0.8-41.3,5.3-61.4
+                    c3.3-14.7,7.8-29,14.1-42.8c9.2-20.4,20.5-39.5,34.6-56.9c18.6-22.8,40.5-41.7,65.9-56.5c23-13.4,47.6-22.9,73.8-28
+                    c18.3-3.6,36.8-5.4,55.5-4.5c6,0.3,12,1.8,18,2.7c0.8,0.1,1.7,0.2,2.5,0.4c53.1,12.9,90.3,59.4,91.9,115.1
+                    c1.9,65.6-53,122.4-118.5,122.5c-25.4,0-48.7,6.9-70,21.1c-52.2,34.9-68.1,108.5-34.8,161.8C170.9,467.2,196.1,485.2,228.2,493.6z"/>
+                <path id="Black" class="st1" d="M228.2,493.6c-32.1-8.4-57.3-26.4-75-54.7c-33.3-53.3-17.4-126.9,34.8-161.8
+                    c21.2-14.2,44.5-21.1,70-21.1c65.5-0.1,120.5-56.9,118.5-122.5c-1.7-55.7-38.8-102.2-91.9-115.1c-0.8-0.2-1.6-0.3-2.5-0.4
+                    c1.1-2.5,3.2-1,4.7-0.9c30,3.8,58.6,12.7,84.9,27.6c67.3,38.3,109,95.5,121.8,171.9c22.4,134-69.4,254.5-195.7,276.5
+                    c-20.1,3.5-40.3,4.4-60.6,2.7c-0.8-0.1-1.5-0.5-2.2-0.8c-1.6-0.3-3.3-0.7-4.9-1C229.4,493.9,228.8,493.7,228.2,493.6z"/>
+                <path id="BlsckEye" class="st1" d="M218.7,135.3c0.1-20.9,16.9-37.3,38.1-37.1c20.3,0.2,36.7,17,36.6,37.6
+                    c-0.1,20.7-16.9,37.4-37.6,37.3C235,172.9,218.5,156.1,218.7,135.3z"/>
+                <path id="WhiteEye" class="st0" d="M255.9,414.1c-21,0-37.7-16.8-37.7-37.7c0-20.9,16.9-37.6,37.9-37.6c20.9,0,37.7,16.9,37.7,37.8
+                    C293.8,397.3,276.9,414.1,255.9,414.1z"/>
+            </g>
+        </svg>
+    </div>
+    <div id="guide-text"><p id="word"></p></div>
+    <a id="toggle-fullscreen" href="#">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        width="21px" height="42px" viewBox="0 0 21 42" enable-background="new 0 0 21 42" xml:space="preserve">
+            <g id="full" style="opacity: 1">
+                <rect x="19.994" y="0" fill="#020202" width="1" height="8"/>
+                <rect x="12.994" y="0" fill="#020202" width="8" height="1"/>
+                <rect x="14.236" y="2.559" transform="matrix(0.707 -0.7072 0.7072 0.707 3.0892 13.5756)" fill="#020202" width="7.387" height="1"/>
+
+                <rect y="13" fill="#020202" width="1" height="8"/>
+                <rect y="20" fill="#020202" width="8" height="1"/>
+                <rect x="-0.629" y="17.441" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 17.9178 28.461)" fill="#020202" width="7.386" height="1"/>
+            </g>
+
+            <g id="non-full" style="opacity: 0;transform:translateY(-21px)">
+                <rect x="12.994" y="21" fill="#020202" width="1" height="8"/>
+                <rect x="12.994" y="28" fill="#020202" width="8" height="1"/>
+                <rect x="12.366" y="25.441" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 45.7571 32.9296)" fill="#020202" width="7.386" height="1"/>
+                
+                <rect x="7" y="34" fill="#020202" width="1" height="8"/>
+                <rect y="34" fill="#020202" width="8" height="1"/>
+                <rect x="1.242" y="36.559" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -24.7578 14.3426)" fill="#020202" width="7.386" height="1"/>
+            </g>
+        </svg>
+    </a>
+    <script src="toggle-fullscreen.js"></script>
+    <script src="toggle-menu.js"></script>
+    <script src="word.js"></script>
+    <script src="circle.js"></script>
+</body>
+</html>
